@@ -1,3 +1,4 @@
+// eslint-disable-next-line simple-import-sort/sort
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -24,8 +25,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'   // Make sure this is always the last element in the array.
+    'plugin:prettier/recommended' // Make sure this is always the last element in the array.
   ],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
