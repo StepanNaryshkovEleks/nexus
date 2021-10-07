@@ -1,17 +1,14 @@
-import type { NextPage } from 'next'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
+import type {NextPage} from 'next';
+import {useTheme, ThemeProvider, createTheme} from '@mui/material/styles';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 
 const Home: NextPage = () => {
-               const theme = useTheme();
+
+          const theme = useTheme();
 
 
-
-
-
-
-        return (
+  return (
     <Box
       sx={{
         display: 'flex',
@@ -27,6 +24,6 @@ const Home: NextPage = () => {
       {theme.palette.mode} mode
     </Box>
   );
-}
+};
 
-export default Home
+export default Home;
