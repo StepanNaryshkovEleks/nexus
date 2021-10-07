@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'google',
+    'next',
   ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {
