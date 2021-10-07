@@ -1,5 +1,5 @@
-import React, { useReducer } from "react";
-import { reducer, initialState } from "./reducers";
+import React, {useReducer} from 'react';
+import {reducer, initialState} from './reducers';
 
 export const Store = React.createContext();
 export const Dispatch = React.createContext();
@@ -23,7 +23,7 @@ export function StoreProvider(props) {
 export function useStore() {
   const context = React.useContext(Store);
   if (context === undefined) {
-    throw new Error("useStore must be used within a StoreProvider");
+    throw new Error('useStore must be used within a StoreProvider');
   }
   return context;
 }
@@ -31,7 +31,7 @@ export function useStore() {
 export function useDispatch() {
   const context = React.useContext(Dispatch);
   if (context === undefined) {
-    throw new Error("useDispatch must be used within a StoreProvider");
+    throw new Error('useDispatch must be used within a StoreProvider');
   }
   return context;
 }

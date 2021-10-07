@@ -1,13 +1,13 @@
-import React from "react";
-import { Router } from "react-router-dom";
-import { render, act } from "@testing-library/react";
+import React from 'react';
+import {Router} from 'react-router-dom';
+import {render, act} from '@testing-library/react';
 
-import { createMemoryHistory } from "history";
-import { StoreProvider } from "../store";
+import {createMemoryHistory} from 'history';
+import {StoreProvider} from '../store';
 
 // Patterns found on https://testing-library.com/docs/react-testing-library/setup
 const history = createMemoryHistory();
-const AllProviders = ({ children }) => (
+const AllProviders = ({children}) => (
   <StoreProvider>
     <Router history={history}>
       {children}
@@ -16,7 +16,7 @@ const AllProviders = ({ children }) => (
 );
 
 const renderAll = (ui, options) => ({
-  ...render(ui, { wrapper: AllProviders, ...options }),
+  ...render(ui, {wrapper: AllProviders, ...options}),
   history,
 });
 
@@ -28,7 +28,7 @@ const asyncRenderAll = async (ui, options) => {
   let utils;
   await act(async () => {
     utils = {
-      ...render(ui, { wrapper: AllProviders, ...options }),
+      ...render(ui, {wrapper: AllProviders, ...options}),
       history,
     };
   });
@@ -36,5 +36,5 @@ const asyncRenderAll = async (ui, options) => {
 };
 
 // re-export everything
-export * from "@testing-library/react";
-export { renderAll, asyncRenderAll };
+export * from '@testing-library/react';
+export {renderAll, asyncRenderAll};

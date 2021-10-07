@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-import * as React from 'react';
+import React from 'react';
+import type {NextPage} from 'next';
+import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 const Home: NextPage = () => {
@@ -18,9 +18,11 @@ const Home: NextPage = () => {
         p: 3,
       }}
     >
-      {theme.palette.mode} mode
+      {theme.palette.mode}
+      {' '}
+      mode
     </Box>
   );
-}
+};
 
-export default Home
+export default Home;
