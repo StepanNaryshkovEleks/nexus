@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
+  env: {
+    ENV_BACKEND_PATH: "",
+  },
 }
