@@ -3,6 +3,7 @@ import type {AppProps} from 'next/app';
 import {StoreProvider, useStore} from '../src/store';
 import {ThemeProvider} from '@mui/material/styles';
 import React, {useMemo} from "react";
+
 import createTheme from '../src/theme';
 
 interface ITheme {
