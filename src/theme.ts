@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import {createTheme} from '@mui/material/styles';
 
 interface ISetTheme {
   isDarkMode: boolean
@@ -15,7 +15,7 @@ function setTheme({isDarkMode}: ISetTheme) {
         main: '#19857b',
       },
     },
-  })
+  });
 }
 
 export default setTheme;

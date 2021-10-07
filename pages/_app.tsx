@@ -1,9 +1,9 @@
-import '../src/styles/globals.css'
-import type { AppProps } from 'next/app'
-import { StoreProvider, useStore } from "../src/store";
+import '../src/styles/globals.css';
+import type {AppProps} from 'next/app';
+import {StoreProvider, useStore} from '../src/store';
 import {ThemeProvider} from '@mui/material/styles';
-import React, {useMemo} from "react";
-import createTheme from "../src/theme";
+import React, {useMemo} from 'react';
+import createTheme from '../src/theme';
 
 interface ITheme {
   children: JSX.Element,
@@ -16,13 +16,13 @@ function Theme({children}: ITheme) {
     isDarkMode,
   }), [isDarkMode]);
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
   return <StoreProvider><Theme>
     <Component {...pageProps} />
-  </Theme></StoreProvider>
+  </Theme></StoreProvider>;
 }
 
-export default MyApp
+export default MyApp;

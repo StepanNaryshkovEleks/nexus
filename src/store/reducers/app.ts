@@ -1,5 +1,5 @@
-import APP_ACTIONS from "../../constants/app";
-import {AppActions} from "../actions/app";
+import APP_ACTIONS from '../../constants/app';
+import {AppActions} from '../actions/app';
 
 export const appInitialState = {
   isDarkMode: true,
@@ -15,7 +15,7 @@ export const reducer = (state: IAppState = appInitialState, action: AppActions) 
       return {
         ...state,
         isDarkMode: !state.isDarkMode,
-      }
+      };
     }
     default:
       return state;

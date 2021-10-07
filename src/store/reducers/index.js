@@ -1,14 +1,14 @@
 import {
   appInitialState,
   reducer as app,
-} from "./app";
+} from './app';
 
 export const initialState = {
   app: appInitialState,
 };
 
 const reducers = {
-  app
+  app,
 };
 
 export const combineReducers = (reducersObj) => {
