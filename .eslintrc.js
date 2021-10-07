@@ -49,7 +49,7 @@ module.exports = {
         'ignoreStrings': true,
         'ignoreTemplateLiterals': true,
         'ignoreRegExpLiterals': true,
-        'code': 100,
+        'code': 80,
       },
     ],
   },
