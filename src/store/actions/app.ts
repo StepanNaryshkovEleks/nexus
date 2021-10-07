@@ -1,4 +1,4 @@
-import APP_ACTIONS from "../../../constants/app";
+import APP_ACTIONS from "../../constants/app";
 
 export interface AppActions {
   type: typeof APP_ACTIONS.SET_APP_MODE;

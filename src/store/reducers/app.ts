@@ -1,4 +1,4 @@
-import APP_ACTIONS from "../../../constants/app";
+import APP_ACTIONS from "../../constants/app";
 import {AppActions} from "../actions/app";
 
 export const appInitialState = {

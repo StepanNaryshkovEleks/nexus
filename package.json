@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .ts,.tsx"
+    "lint": "./node_modules/.bin/eslint src"
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -38,12 +38,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "tsc --noEmit && lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint '*/**/*.{js,jsx, ts, tsx}' --fix"
+    "*.{js,jsx,ts,tsx,}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html}": [
+      "prettier --write"
     ]
   }
 }
