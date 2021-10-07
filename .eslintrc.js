@@ -1,57 +1,45 @@
-// eslint-disable-next-line no-undef
 module.exports = {
-  'env': {
-    'node': true,
-    'commonjs': true,
-    'browser': true,
-    'es6': true,
-    'jest': true,
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
-  'extends': [
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
+  env: {
+    browser: true,
+    amd: true,
+    node: true
+  },
+  extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'google',
-    'next',
+    'plugin:jsx-a11y/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended'   // Make sure this is always the last element in the array.
   ],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true,
-    },
-    'ecmaVersion': 12,
-    'sourceType': 'module',
-  },
-  'plugins': [
-    'react',
-    'react-hooks',
-    '@typescript-eslint',
-  ],
-  'globals': {
-    'JSX': 'readonly',
-  },
-  'rules': {
-    'react-hooks/exhaustive-deps': 'error',
-    'no-var': 'error',
-    'brace-style': 'error',
-    'prefer-template': 'error',
-    'space-before-blocks': 'error',
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
-    'import/prefer-default-export': 'off',
+  rules: {
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'require-jsdoc': 'off',
-    'max-len': [
-      'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'simple-import-sort/sort': 'error',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
       {
-        'tabWidth': 2,
-        'ignoreComments': false,
-        'ignoreTrailingComments': true,
-        'ignoreUrls': true,
-        'ignoreStrings': true,
-        'ignoreTemplateLiterals': true,
-        'ignoreRegExpLiterals': true,
-        'code': 80,
-      },
-    ],
-  },
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton']
+      }
+    ]
+  }
 };
