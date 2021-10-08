@@ -3,12 +3,19 @@ import {
   reducer as app,
 } from './app';
 
+import {
+  userInitialState,
+  reducer as user,
+} from './user';
+
 export const initialState = {
   app: appInitialState,
+  user: userInitialState,
 };
 
 const reducers = {
   app,
+  user,
 };
 
 export const combineReducers = (reducersObj) => {

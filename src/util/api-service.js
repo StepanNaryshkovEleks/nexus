@@ -5,7 +5,6 @@ export class ApiService {
   constructor() {
     this.requester = axios.create({
       'baseURL': config.baseUrl,
-      'Access-Control-Allow-Origin': '*',
     });
   }
 
