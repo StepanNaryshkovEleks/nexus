@@ -1,7 +1,6 @@
-import {Redirect, Route} from 'react-router-dom';
-import CNST from '../constants/app';
-import {useStore} from "../store";
-
+import { Redirect, Route } from "react-router-dom";
+import CNST from "../constants/app";
+import { useStore } from "../store";
 
 interface Props {
   component: React.ComponentType<any>;
@@ -9,8 +8,8 @@ interface Props {
   path?: string;
 }
 
-const IsNotAuthUser = ({component: Component, ...rest}: Props) => {
-  const {user} = useStore();
+const IsNotAuthUser = ({ component: Component, ...rest }: Props) => {
+  const { user } = useStore();
   return (
     <Route
       {...rest}

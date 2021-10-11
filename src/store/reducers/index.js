@@ -1,12 +1,6 @@
-import {
-  appInitialState,
-  reducer as app,
-} from './app';
+import { appInitialState, reducer as app } from "./app";
 
-import {
-  userInitialState,
-  reducer as user,
-} from './user';
+import { userInitialState, reducer as user } from "./user";
 
 export const initialState = {
   app: appInitialState,

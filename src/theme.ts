@@ -1,18 +1,18 @@
-import {createTheme} from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 interface ISetTheme {
-  isDarkMode: boolean
+  isDarkMode: boolean;
 }
 
-function setTheme({isDarkMode}: ISetTheme) {
+function setTheme({ isDarkMode }: ISetTheme) {
   return createTheme({
     palette: {
-      mode: isDarkMode ? 'dark' : 'light',
+      mode: isDarkMode ? "dark" : "light",
       primary: {
-        main: '#556cd6',
+        main: "#556cd6",
       },
       secondary: {
-        main: '#19857b',
+        main: "#19857b",
       },
     },
   });

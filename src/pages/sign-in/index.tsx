@@ -1,6 +1,6 @@
-import {useTheme} from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import { Link } from 'react-router-dom';
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const theme = useTheme();
@@ -8,26 +8,20 @@ const SignIn = () => {
     <>
       <Box
         sx={{
-          display: 'flex',
-          width: '100%',
-          alignItems: 'center',
-          justifyContent: 'center',
-          bgcolor: 'background.default',
-          color: 'text.primary',
+          display: "flex",
+          width: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+          bgcolor: "background.default",
+          color: "text.primary",
           borderRadius: 1,
           p: 3,
         }}
       >
-        {theme.palette.mode}
-        {' '}
-        mode
+        {theme.palette.mode} mode
       </Box>
       Sign IN
-
-
-      <Link to="/dashboard">
-        dashboard
-      </Link>
+      <Link to="/dashboard">dashboard</Link>
     </>
   );
 };

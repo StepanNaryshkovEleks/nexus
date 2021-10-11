@@ -1,10 +1,10 @@
-import axios from 'axios';
-import config from './api-config';
+import axios from "axios";
+import config from "./api-config";
 
 export class ApiService {
   constructor() {
     this.requester = axios.create({
-      'baseURL': config.baseUrl,
+      baseURL: config.baseUrl,
     });
   }
 

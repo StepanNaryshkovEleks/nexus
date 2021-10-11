@@ -1,4 +1,4 @@
-import USER_ACTIONS from '../../constants/user';
+import USER_ACTIONS from "../../constants/user";
 
 export const userInitialState = {
   isLoggedIn: false,
@@ -6,8 +6,8 @@ export const userInitialState = {
 };
 
 export interface IUserState {
-  isLoggedIn: boolean,
-  fetching: boolean,
+  isLoggedIn: boolean;
+  fetching: boolean;
 }
 
 export const reducer = (state: IUserState = userInitialState, action: any) => {

@@ -1,7 +1,7 @@
-import APP_ACTIONS from '../../constants/app';
+import APP_ACTIONS from "../../constants/app";
 
 export interface AppActionsProps {
-  isDarkMode?: boolean
+  isDarkMode?: boolean;
 }
 
 export interface AppActionsDispatch {
@@ -9,13 +9,13 @@ export interface AppActionsDispatch {
   payload?: AppActionsProps;
 }
 
-type Dispatch = (arg: AppActionsDispatch) => {}
+type Dispatch = (arg: AppActionsDispatch) => {};
 
 interface ISetAppMode {
-  dispatch: Dispatch,
-  payload?: AppActionsProps
+  dispatch: Dispatch;
+  payload?: AppActionsProps;
 }
 
-export const setAppMode = ({dispatch, payload}: ISetAppMode) => {
-  dispatch({type: APP_ACTIONS.SET_APP_MODE.SUCCESS, payload});
+export const setAppMode = ({ dispatch, payload }: ISetAppMode) => {
+  dispatch({ type: APP_ACTIONS.SET_APP_MODE.SUCCESS, payload });
 };
