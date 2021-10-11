@@ -18,8 +18,14 @@ export const reducer = (state: IUserState = userInitialState, action: any) => {
         fetching: true,
       };
     }
-    case USER_ACTIONS.SIGN_IN.ERROR:
     case USER_ACTIONS.SIGN_IN.SUCCESS: {
+      return {
+        ...state,
+        fetching: false,
+        isLoggedIn: true,
+      };
+    }
+    case USER_ACTIONS.SIGN_IN.ERROR: {
       return {
         ...state,
         fetching: false,

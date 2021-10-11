@@ -1,8 +1,12 @@
+import React, {FC} from 'react';
 import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-const SignIn = () => {
+export interface ISignIn {
+
+}
+export const SignIn: FC<ISignIn> = () => {
   const theme = useTheme();
   return (
     <>
@@ -22,7 +26,7 @@ const SignIn = () => {
         {' '}
         mode
       </Box>
-      Sign IN
+      Sign In
 
 
       <Link to="/dashboard">

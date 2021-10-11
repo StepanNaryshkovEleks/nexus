@@ -1,9 +1,13 @@
+import React, {FC} from 'react';
 import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-const Dashboard = () => {
-  console.log('here!!')
+export interface IDashboard {
+
+}
+
+export const Dashboard: FC<IDashboard> = () => {
   const theme = useTheme();
   return (
     <>

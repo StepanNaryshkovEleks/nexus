@@ -2,7 +2,7 @@ import APP_ACTIONS from '../../constants/app';
 import {AppActionsDispatch} from '../actions/app';
 
 export const appInitialState = {
-  isDarkMode: true,
+  isDarkMode: false,
 };
 
 export interface IAppState {

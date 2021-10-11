@@ -4,5 +4,5 @@ const baseUrl =
     process.env.ENV_BACKEND_PATH;
 
 export default {
-  baseUrl: baseUrl,
+  baseUrl,
 };
