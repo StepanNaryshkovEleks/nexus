@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import Router from './routes';
 import {ThemeProvider} from '@mui/material/styles';
-import {useStore} from "./store";
+import {useStore} from './store';
 import createTheme from '../src/theme';
 
 function App() {
