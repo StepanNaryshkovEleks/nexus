@@ -5,7 +5,7 @@ import {useStore} from "./store";
 import createTheme from '../src/theme';
 
 function App() {
-  const {app: {isDarkMode}} = useStore();
+        const {app: { isDarkMode}} = useStore();
   const theme = useMemo(() => createTheme({
     isDarkMode,
   }), [isDarkMode]);
