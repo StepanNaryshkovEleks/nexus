@@ -5,6 +5,7 @@ interface ISetTheme {
 }
 
 function setTheme({isDarkMode}: ISetTheme) {
+  // it needs to customize color schema of material ui
   return createTheme({
     palette: {
       mode: isDarkMode ? 'dark' : 'light',
