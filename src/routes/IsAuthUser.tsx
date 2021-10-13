@@ -1,6 +1,7 @@
-﻿import {Redirect, Route} from 'react-router-dom';
+﻿import React from 'react';
+import {Redirect, Route} from 'react-router-dom';
 import CNST from '../constants/app';
-import {useStore} from "../store";
+import {useStore} from '../store';
 
 
 interface Props {
